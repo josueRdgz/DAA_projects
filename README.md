@@ -36,7 +36,12 @@ Si todas las filas tienen a lo menos una intersección con costo cero que no ha 
 8-  Volver al paso c)
 
 
-Uso: hungarian=Hungarian(profitMatrix,isProfitMatrix=True)
+Uso: 
+
+     hungarian=Hungarian(profitMatrix,isProfitMatrix=True)
+
      hungarian.calculate
+     
      hungarian.getResults()
+     
      hungarian.getTotalPotential()
