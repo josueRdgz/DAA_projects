@@ -1,0 +1,87 @@
+Explicación Metodo Hungaro:
+
+Paso 1: restar los mínimos de cada fila
+
+Para cada fila de la matriz se selecciona el elemento con el valor más bajo y se lo resta de cada elemento en esa fila.
+
+Paso 2: restar los mínimos de cada columna
+
+De manera similar, se selecciona para cada columna el elemento con el valor más bajo y se lo resta de cada elemento en esa columna.
+
+Paso 3: cubrir todos los ceros con un mínimo número de líneas
+
+Se deben cubrir todos los ceros en la matriz resultante del paso 2 usando un número mínimo de líneas horizontales y verticales, ya sea por filas o columnas.
+
+Si se requiere un total de n líneas para cubrir todos los ceros, siendo n igual al tamaño n por n de la matriz, se tendrá una asignación óptima entre los ceros y por tanto el algoritmo se detiene.
+
+De lo contrario, si se requieren menos de n líneas para cubrir todos los ceros en la matriz, se continúa con el paso 4.
+
+Paso 4: crear ceros adicionales
+
+Se selecciona el menor elemento de la matriz (llamado k) que no esté cubierto por una de las líneas realizadas en el paso 3.
+
+Se resta el valor de k de todos los elementos que no están cubiertos por líneas. Posteriormente se suma el valor de k a todos los elementos que están cubiertos por la intersección de dos líneas.
+
+Los elementos que están cubiertos por una sola línea se dejan tal como están. Después de realizar este paso, se regresa al paso 3.
+
+Asignación óptima
+
+Una vez que se detenga el algoritmo en el paso 3, se elige un conjunto de ceros de tal manera que cada fila y cada columna tenga solo un cero seleccionado.
+
+Si en este proceso de selección no existe un único cero en una fila o columna, se elegirá entonces uno de esos ceros. Se eliminan los ceros restantes en esa columna o fila, repitiendo lo mismo para las otras asignaciones también.
+
+Si no hay una única asignación de ceros significa que existen múltiples soluciones. Sin embargo, el costo seguirá siendo el mismo para los diferentes conjuntos de asignaciones.
+
+Se elimina cualquier fila o columna ficticia que se haya agregado. Los ceros elegidos en esta matriz final corresponden así a la asignación ideal requerida en la matriz original.
+
+Ejemplo
+
+Consideremos una empresa donde existen cuatro actividades (A1, A2, A3, A4) que deben ser ejecutadas por cuatro trabajadores (T1, T2, T3, T4). Se debe asignar una actividad por trabajador.
+
+La siguiente matriz muestra el costo de asignar un determinado trabajador a una determinada actividad. El objetivo que se persigue es minimizar el costo total de la tarea compuesta por estas cuatro actividades.
+
+   |A1 |A2| A3| A4|
+T1  82  83  69  92
+T2  77  37  49  92
+T3  11  69   5  86
+T4  8   9   98  23
+
+
+Paso 1: restar los mínimos de cada fila
+
+Se comienza por restar el elemento con el valor mínimo de cada fila de los demás elementos de esa fila. Por ejemplo, el elemento más pequeño en la primera fila es 69. Por tanto, se resta 69 de cada elemento en la primera fila.
+
+Paso 2: restar los mínimos de cada columna
+
+Del mismo modo, se resta el elemento con el valor mínimo de cada columna de los demás elementos de esa columna, obteniendo la siguiente matriz:
+
+Paso 3: cubrir todos los ceros con un mínimo número de líneas
+
+Ahora se determinará el mínimo número de líneas (horizontales o verticales) que se requieren para cubrir todos los ceros en la matriz. Todos los ceros se pueden cubrir usando 3 líneas:
+
+Debido a que el número de líneas requeridas es tres y es menor que el tamaño de la matriz (n=4), se continúa con el paso 4.
+
+Paso 4: crear ceros adicionales
+
+Se selecciona el menor elemento no cubierto por las líneas, cuyo valor es 6. Se resta este valor de todos los elementos no cubiertos y este mismo valor se suma a todos los elementos cubiertos por la intersección de dos líneas.
+
+Paso 3 (repetición)
+
+Nuevamente se determina el mínimo número de líneas requeridas para cubrir todos los ceros en la matriz. En esta ocasión se requieren cuatro líneas
+
+Debido a que el número de líneas requeridas es 4, igual al tamaño de la matriz (n=4), se tiene una asignación óptima entre los ceros en la matriz. Por tanto, el algoritmo se detiene.
+
+Tal como indica el método, la selección realizada de los  ceros corresponde a una asignación óptima.
+
+Esta selección de ceros corresponde a la siguiente asignación óptima en la matriz de costos original.
+Por tanto, el trabajador 1 debe realizar la actividad 3, el trabajador 2, la actividad 2, el trabajador 3, la actividad 1 y el trabajador 4 debe realizar la actividad 4. El costo total de esta asignación óptima es de 69+37+11+23=140.
+
+Por tanto, el trabajador 1 debe realizar la actividad 3, el trabajador 2, la actividad 2, el trabajador 3, la actividad 1 y el trabajador 4 debe realizar la actividad 4. El costo total de esta asignación óptima es de 69+37+11+23=140.
+
+Referencias:
+Hungarian Algorithm (2019). The Hungarian algorithm. Tomado de: hungarianalgorithm.com.
+Study (2019). Using the Hungarian Algorithm to Solve Assignment Problems. Tomado de: study.com.
+Wisdom Jobs (2018). Hungarian Method for Solving Assignment Problem – Quantitative Techniques for Management. Tomado de: wisdomjobs.com.
+Geeks for Geeks (2019). Hungarian Algorithm for Assignment Problem. Tomado de: geeksforgeeks.org.
+Karleigh Moore, Nathan Landman (2019). Hungarian Maximum Matching Algorithm. Brilliant. Tomado de: brilliant.org.
+Lifeder. (16 de julio de 2019). Método húngaro: en qué consiste, ejemplo. Recuperado de: https://www.lifeder.com/metodo-hungaro/.
