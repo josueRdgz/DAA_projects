@@ -1,9 +1,10 @@
 import random
 from tools import Grafo
+
 class GeneradorEntradas:
-    def __init__(self, num_nodos, probabilidad_arista):
-        self.num_nodos = num_nodos
-        self.probabilidad_arista = probabilidad_arista
+    def __init__(self):
+        self.num_nodos = random.random(5,10)
+        self.probabilidad_arista = 0.5
 
     def generar_grafo(self):
         grafo = Grafo()
@@ -18,10 +19,3 @@ class GeneradorEntradas:
     def generar_k(self):
         return random.randint(1, self.num_nodos)
 
-# Ejemplo de uso
-random.random(5,10)
-generador = GeneradorEntradas(10, 0.5)
-grafo = generador.generar_grafo()
-k = generador.generar_k()
-print(grafo)
-print(k)

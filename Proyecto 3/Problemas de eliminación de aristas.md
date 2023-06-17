@@ -107,3 +107,8 @@ Este algoritmo es $\frac{k}{2}$ - aproximación del problema, lo que significa q
 Además de la solución aleatoria demostrada anteriormente desarrollamos una metaheurística basada en colonia de hormigas.
 
 # Bibliografía
+
+1. M. YANNAKAKIS, Node and edge-deletion NP-complete problems, Proc. of Tenth Annual ACM Symposium on Theory of Computing, 1978, pp. 253-264.
+2.  M. YANNAKAKIS, Edge-deletion problems, 1981
+3.  R. Karlin, Anna. An Improved Approximation Algorithm for the Minimum 𝑘-Edge Connected Multi-subgraph Problem
+4.  G. I. ORLOVA, AND Y. G. DORFMAN, Finding the maximum cut in a graph, Eng. Cybernetics, 10 (1972), pp. 502-506.
