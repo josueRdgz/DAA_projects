@@ -104,7 +104,29 @@ Este algoritmo es $\frac{k}{2}$ - aproximación del problema, lo que significa q
 
 ### Solución con metaheurísitca
 
-Además de la solución aleatoria demostrada anteriormente desarrollamos una metaheurística basada en colonia de hormigas.
+Además de la solución aleatoria demostrada anteriormente desarrollamos una metaheurística basada en colonia de hormigas.:
+
+1. Se inicializa una colonia de hormigas. Cada hormiga se mueve por el grafo y construye una solución parcial.
+
+2. Se asigna una feromona inicial a cada arista del grafo.
+
+3. La solución parcial está dada por:
+
+   - La hormiga comienza en un vértice aleatorio del grafo.
+
+   - La hormiga se mueve a un vecino aleatorio del vértice actual, eligiendo una arista con una probabilidad proporcional a la cantidad de feromona en la arista.
+
+   - Si la arista elegida conecta dos vértices del mismo color, la hormiga la elimina y continúa construyendo la solución.
+
+   - Si la arista elegida conecta dos vértices de diferente color, la hormiga la mantiene y continúa construyendo la solución.
+
+   - Si la hormiga ha eliminado k aristas, termina la construcción de la solución.
+
+4. Se Actualiza la cantidad de feromona en cada arista de acuerdo a la calidad de las soluciones construidas por las hormigas.
+
+5. Se Repiten los pasos 3 y 4 hasta que se alcance un número de iteraciones
+
+6. Se devuelve la mejor solución encontrada.
 
 # Bibliografía
 
