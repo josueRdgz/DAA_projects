@@ -1,7 +1,7 @@
-# Proyectos de DAA
+# Design and analysis of algorithms (Projects)
 
-Estos proyectos son evaluaciones basadas en temas de la asignatura *Diseño y Análisis de Algoritmos*, recibida en cuarto año de *Ciencias de la Computación* en la *Facultad de Matemática y Computación* de la *Universidad de La Habana*.
+These projects are evaluations based on topics from the subject *Design and Analysis of Algorithms*, received in the fourth year of *Computer Science* at the *Faculty of Mathematics and Computing* of the *University of Havana*.
 
-- Tema 1: Greedy Algorithms, Divide-and-Conquer, Backtrack, Dynamic Programming
-- Tema 2: Graph Algorithms, Maximum Flow
-- Tema 3: NP-Completeness
+⭕️ Project 1: Greedy Algorithms, Divide-and-Conquer, Backtrack, Dynamic Programming
+⭕️ Project 2: Graph Algorithms, Maximum Flow
+⭕️ Project 3: NP-Completeness
